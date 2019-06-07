@@ -117,7 +117,10 @@ body {
 		}
 	
 	h1 {
-		font-size: 2em;
+		font-size: 2rem;
+		@media (max-width: 500px) {
+			font-size: 1.5rem;
+		}
 	}
 
 	h2 {
@@ -136,11 +139,19 @@ body {
 			ul {
 				display: flex;
 				justify-content: flex-end;
+				@media (max-width: 500px) {
+					justify-content: center;
+				}
 
 				a {
 					padding: 0 0 0 2em;
 					text-decoration: none;
 					.font();
+					@media (max-width: 500px) {
+						padding: 0 2.6em;
+						font-size: 90%;
+
+					}
 				}
 			}
 		}
@@ -152,6 +163,7 @@ body {
 		justify-content: flex-end;
 		align-items: center;
 		background: @primary;
+
 		.text {
 			width: 50%;
 			display: flex;
@@ -177,11 +189,19 @@ body {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			padding: 40px 0 10px 0;
+			@media (max-width: 500px) {
+				flex-direction: column;
+				padding-bottom: 0px;
+			}
 			button{
 				.buttons();
 				a {
 					text-decoration: none;
-					color: @primary;
+					color: white;
+				}
+				@media (max-width: 500px) {
+					width: 100%;
+					margin-bottom: 2rem;
 				}
 			}
 		}
@@ -189,12 +209,20 @@ body {
 		.education {
 			table {
 				.tables();
+				@media (max-width: 500px){
+					font-size: 0.9rem;
+					line-height: 1;
+				}
 			}
 		}
 
 		.work-experience {
 			table{
 				.tables();
+				@media (max-width: 500px){
+					font-size: 0.9rem;
+					line-height: 1;
+				}
 			}
 		}	
 	}
@@ -206,6 +234,11 @@ body {
 		background: @accent;
 		margin-top: 30px;
 		margin-bottom: 30px;
+		@media (max-width: 500px) {
+			flex-direction: column-reverse;
+			background: white;
+			align-items: flex-start;
+		}
 
 		.text {
 			width: 50%;
@@ -213,25 +246,33 @@ body {
 			flex-direction: column;
 			color: @primary;
 			padding-left: 1em;
+			padding-bottom: 2em;
+			@media (max-width: 500px) {
+				background: @accent;
+				width: 100%;
+			}
 
 			h2 {
-				color: @primary;
+				color: white;
 				padding-bottom: .5em;
 			}
 		}
 
 		.img-container{
 			width: 50%;
-			height: 100%;
-			display: flex;
-			align-items: center;
+			height: auto;
+			@media (max-width: 500px) {
+				width: 100%;
+				height: 20em;
+			}
 			img{
 				width: 100%;
 				height: 100%; 
+				}
 			}
 		}
 
-	}
+
 }
 
 

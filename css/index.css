@@ -184,7 +184,12 @@ body h6 {
   font-weight: 700;
 }
 body h1 {
-  font-size: 2em;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  body h1 {
+    font-size: 1.5rem;
+  }
 }
 body h2 {
   font-size: 1.5em;
@@ -201,6 +206,11 @@ body header nav ul {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  body header nav ul {
+    justify-content: center;
+  }
+}
 body header nav ul a {
   padding: 0 0 0 2em;
   text-decoration: none;
@@ -208,6 +218,12 @@ body header nav ul a {
   font-weight: 300;
   color: #5d5d5d;
   size: 62.5%;
+}
+@media (max-width: 500px) {
+  body header nav ul a {
+    padding: 0 2.6em;
+    font-size: 90%;
+  }
 }
 body .banner {
   display: flex;
@@ -241,6 +257,12 @@ body .main-text .button-box {
   justify-content: space-between;
   padding: 40px 0 10px 0;
 }
+@media (max-width: 500px) {
+  body .main-text .button-box {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+}
 body .main-text .button-box button {
   background-color: slategray;
   font-size: 70%;
@@ -254,7 +276,13 @@ body .main-text .button-box button {
 }
 body .main-text .button-box button a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: white;
+}
+@media (max-width: 500px) {
+  body .main-text .button-box button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 body .main-text .education table {
   text-align: left;
@@ -272,6 +300,12 @@ body .main-text .education table th {
   padding: 0.75em;
   font-weight: 700;
 }
+@media (max-width: 500px) {
+  body .main-text .education table {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+}
 body .main-text .work-experience table {
   text-align: left;
   width: 100%;
@@ -288,6 +322,12 @@ body .main-text .work-experience table th {
   padding: 0.75em;
   font-weight: 700;
 }
+@media (max-width: 500px) {
+  body .main-text .work-experience table {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+}
 body .bottom-banner {
   display: flex;
   justify-content: flex-end;
@@ -296,22 +336,40 @@ body .bottom-banner {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media (max-width: 500px) {
+  body .bottom-banner {
+    flex-direction: column-reverse;
+    background: white;
+    align-items: flex-start;
+  }
+}
 body .bottom-banner .text {
   width: 50%;
   display: flex;
   flex-direction: column;
   color: #f2f2f2;
   padding-left: 1em;
+  padding-bottom: 2em;
+}
+@media (max-width: 500px) {
+  body .bottom-banner .text {
+    background: #ff420c;
+    width: 100%;
+  }
 }
 body .bottom-banner .text h2 {
-  color: #f2f2f2;
+  color: white;
   padding-bottom: 0.5em;
 }
 body .bottom-banner .img-container {
   width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  height: auto;
+}
+@media (max-width: 500px) {
+  body .bottom-banner .img-container {
+    width: 100%;
+    height: 20em;
+  }
 }
 body .bottom-banner .img-container img {
   width: 100%;
