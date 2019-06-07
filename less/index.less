@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -56,4 +57,199 @@ table {
 html, body {
     height: 100%;
 }
+
+//Custom styles
+//Variables
+@accent: #ff420c;
+@primary: #f2f2f2;
+@heading-color: #252122;
+@font-color: #5d5d5d;
+
+//Mixins
+.font() {
+	font-family:'Source Sans Pro';
+	font-weight: 300;
+	color: @font-color;
+	size: 62.5%;
+}
+
+.boxes() {
+	margin: 20px 0 20px 0;
+}
+
+.tables() {
+	text-align: left;
+	width: 100%;
+	tr:nth-child(odd) {background-color: #f2f2f2;}
+	td {
+		padding: .75em;
+	}
+	th {
+		background-color: #ff420c;
+		color: white;
+		padding: .75em;
+		font-weight: 700;
+	}
+}
+
+.buttons() {
+	background-color: slategray;
+  font-size: 70%;
+  font-weight: 700;
+  border: 0;
+  width: 45%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 60px 20px 60px;
+  text-align: center;
+}
+
+body {
+	max-width: 1400px;
+	line-height: 1.75em;
+	width: 100%;
+	padding: 0 2rem;  
+	.font();
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @heading-color;
+		font-weight: 700;
+		}
+	
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		padding-top: 1em;
+		padding-bottom: .5em;
+	}
+			
+	h3 {
+		font-size: 1.35em;
+	}
+
+	header {
+		.boxes();
+		nav {
+			ul {
+				display: flex;
+				justify-content: flex-end;
+
+				a {
+					padding: 0 0 0 2em;
+					text-decoration: none;
+					.font();
+				}
+			}
+		}
+	}
+
+	.banner {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: center;
+		background: @primary;
+		.text {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.img-container{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			img{
+				width: 100%;
+				height: 100%; 
+			}
+		}
+	}
+
+	.main-text {
+		.boxes();
+		.button-box {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 40px 0 10px 0;
+			button{
+				.buttons();
+				a {
+					text-decoration: none;
+					color: @primary;
+				}
+			}
+		}
+
+		.education {
+			table {
+				.tables();
+			}
+		}
+
+		.work-experience {
+			table{
+				.tables();
+			}
+		}	
+	}
+
+	.bottom-banner {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		background: @accent;
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		.text {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			color: @primary;
+			padding-left: 1em;
+
+			h2 {
+				color: @primary;
+				padding-bottom: .5em;
+			}
+		}
+
+		.img-container{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			img{
+				width: 100%;
+				height: 100%; 
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 

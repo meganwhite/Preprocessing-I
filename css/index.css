@@ -2,9 +2,36 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
-
-
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -137,113 +164,84 @@ html,
 body {
   height: 100%;
 }
-
-/* Custom CSS */
-body{
+body {
+  max-width: 1400px;
+  line-height: 1.75em;
+  width: 100%;
+  padding: 0 2rem;
   font-family: 'Source Sans Pro';
   font-weight: 300;
   color: #5d5d5d;
-  font-size: 14pt;
-  line-height: 1.75em;
-  margin-left:2rem;
-  margin-right:2rem;
+  size: 62.5%;
 }
-
-h1, h2, h3, h4, h5, h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   color: #252122;
   font-weight: 700;
 }
-
-h1 {
-  font-size: 1.75em;
+body h1 {
+  font-size: 2em;
 }
-
-h2 {
+body h2 {
   font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
-
-h3 {
+body h3 {
   font-size: 1.35em;
 }
-
-header {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 1400px;
+body header {
+  margin: 20px 0 20px 0;
 }
-header ul {
+body header nav ul {
   display: flex;
   justify-content: flex-end;
-  padding-right: 2em;
 }
-header a{
+body header nav ul a {
   padding: 0 0 0 2em;
   text-decoration: none;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  color: #5d5d5d;
+  size: 62.5%;
 }
-
-.banner {
+body .banner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
   background: #f2f2f2;
 }
-
-.banner .text {
+body .banner .text {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-.img-container{
+body .banner .img-container {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-
-img{
+body .banner .img-container img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
-  
-.main-text h2{
-  padding-top: 1em;
-  padding-bottom: .5em;
+body .main-text {
+  margin: 20px 0 20px 0;
 }
-
-table {
-  text-align: left;
-  width: 100%;
-}
-
-tr:nth-child(odd) {background-color: #f2f2f2;}
-
-td {
-  padding: .75em;
-}
-
-th {
-  background-color: #ff420c;
-  color: white;
-  padding: .75em;
-  font-weight: 700;
-}
-
-.misc ul li{
-  padding-bottom: .5em;
-}
-
-.button-box {
+body .main-text .button-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 40px 0 10px 0;
 }
-
-.button-box button {
+body .main-text .button-box button {
   background-color: slategray;
   font-size: 70%;
   font-weight: 700;
@@ -254,71 +252,68 @@ th {
   padding: 20px 60px 20px 60px;
   text-align: center;
 }
-
-.button-box button a {
+body .main-text .button-box button a {
   text-decoration: none;
-  color: white;
+  color: #f2f2f2;
 }
-
-.misc {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  align-items: center;
+body .main-text .education table {
+  text-align: left;
   width: 100%;
-  background:  #ff420c;
 }
-
-.misc .text {
-  width: 50%;
-  height: 100%;
+body .main-text .education table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+body .main-text .education table td {
+  padding: 0.75em;
+}
+body .main-text .education table th {
+  background-color: #ff420c;
   color: white;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: .75em;
+  padding: 0.75em;
+  font-weight: 700;
 }
-
-.misc .text h2{
+body .main-text .work-experience table {
+  text-align: left;
+  width: 100%;
+}
+body .main-text .work-experience table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+body .main-text .work-experience table td {
+  padding: 0.75em;
+}
+body .main-text .work-experience table th {
+  background-color: #ff420c;
   color: white;
-  padding-top: .5em;
+  padding: 0.75em;
+  font-weight: 700;
 }
-
-.misc img {
-  width: 50%;
-  height: 23em;
-}
-
-
-.bottom-banner {
+body .bottom-banner {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background:#ff420c;
+  background: #ff420c;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-.bottom-banner .text {
+body .bottom-banner .text {
   width: 50%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #f2f2f2;
   padding-left: 1em;
 }
-
-.bottom-banner h2 {
- color: white;
- padding-bottom: .5em;
+body .bottom-banner .text h2 {
+  color: #f2f2f2;
+  padding-bottom: 0.5em;
 }
-
-.bottom-banner img{
-  padding-left: 0.5em;
+body .bottom-banner .img-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-
-@media (max-width: 671px){
-.bottom-banner img{
-  height: 18em;
+body .bottom-banner .img-container img {
+  width: 100%;
+  height: 100%;
 }
-
