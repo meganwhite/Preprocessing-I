@@ -1,1 +1,377 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  max-width: 1400px;
+  line-height: 1.75em;
+  width: 100%;
+  padding: 0 2rem;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  color: #5d5d5d;
+  size: 62.5%;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: #252122;
+  font-weight: 700;
+}
+body h1 {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  body h1 {
+    font-size: 1.5rem;
+  }
+}
+body h2 {
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+body h3 {
+  font-size: 1.35em;
+}
+body header {
+  margin: 20px 0 20px 0;
+}
+body header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  body header nav ul {
+    justify-content: center;
+  }
+}
+body header nav ul a {
+  padding: 0 0 0 2em;
+  text-decoration: none;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  color: #5d5d5d;
+  size: 62.5%;
+}
+@media (max-width: 500px) {
+  body header nav ul a {
+    padding: 0 2.6em;
+    font-size: 90%;
+  }
+}
+body .banner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  background: #f2f2f2;
+}
+body .banner .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .banner .img-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body .banner .img-container img {
+  width: 100%;
+  height: 100%;
+}
+body .main-text {
+  margin: 20px 0 20px 0;
+}
+body .main-text .button-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0 10px 0;
+}
+@media (max-width: 500px) {
+  body .main-text .button-box {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+}
+body .main-text .button-box button {
+  background-color: slategray;
+  font-size: 70%;
+  font-weight: 700;
+  border: 0;
+  width: 45%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 60px 20px 60px;
+  text-align: center;
+}
+body .main-text .button-box button a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 500px) {
+  body .main-text .button-box button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+body .main-text .education table {
+  text-align: left;
+  width: 100%;
+}
+body .main-text .education table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+body .main-text .education table td {
+  padding: 0.75em;
+}
+body .main-text .education table th {
+  background-color: #ff420c;
+  color: white;
+  padding: 0.75em;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  body .main-text .education table {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+}
+body .main-text .work-experience table {
+  text-align: left;
+  width: 100%;
+}
+body .main-text .work-experience table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+body .main-text .work-experience table td {
+  padding: 0.75em;
+}
+body .main-text .work-experience table th {
+  background-color: #ff420c;
+  color: white;
+  padding: 0.75em;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  body .main-text .work-experience table {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+}
+body .bottom-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #ff420c;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  body .bottom-banner {
+    flex-direction: column-reverse;
+    background: white;
+    align-items: flex-start;
+  }
+}
+body .bottom-banner .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  color: #f2f2f2;
+  padding-left: 1em;
+  padding-bottom: 2em;
+}
+@media (max-width: 500px) {
+  body .bottom-banner .text {
+    background: #ff420c;
+    width: 100%;
+  }
+}
+body .bottom-banner .text h2 {
+  color: white;
+  padding-bottom: 0.5em;
+}
+body .bottom-banner .img-container {
+  width: 50%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  body .bottom-banner .img-container {
+    width: 100%;
+    height: 20em;
+  }
+}
+body .bottom-banner .img-container img {
+  width: 100%;
+  height: 100%;
+}
